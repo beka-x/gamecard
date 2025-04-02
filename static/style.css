@@ -1,0 +1,39 @@
+/* Основной контейнер игры */
+.game-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Сеточка карточек */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Стиль для каждой карточки */
+.card {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    transition: transform 0.3s ease;
+}
+
+/* Стиль для перевернутых карт */
+.card.flipped {
+    background-color: #fff;
+    transform: rotateY(180deg);
+}
+
+/* Стиль для карточек, которые совпали */
+.card.matched {
+    background-color: #aaffaa;
+}
